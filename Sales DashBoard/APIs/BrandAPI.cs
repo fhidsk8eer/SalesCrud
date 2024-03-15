@@ -81,7 +81,6 @@ namespace Sales_DashBoard.APIs
             if (_context.Brands.Any(x => x.Name == brand.Name))
             {
                 return BadRequest("Duplicate");
-                throw new Exception("Duplicate");
             }
             
             _context.Brands.Add(brand);
